@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card" style="width: 70rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{fil.name}}</h5>
+     <img  src="{{fil.img.url}}"class="card-img-top"width="800"height="700" alt="Card image cap">
+    <p class="card-text">{{fil.desc}}<br>{{fil.year}}</p>
+    <a href="{% url 'app:update' fil.id %}" class="card-link">EDIT</a>
+    <a href="{% url 'app:delete' fil.id %}" class="card-link">DELETE</a>
+  </div>
+</div>
+        </div>
+    </div>
+</div>
+{% endblock %}
